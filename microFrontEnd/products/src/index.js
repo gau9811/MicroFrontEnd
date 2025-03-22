@@ -1,8 +1,10 @@
 import { faker } from "@faker-js/faker";
+
 let products = "";
 
-for (let i = 0; i < 2; i++) {
-  products += `<div>${faker.commerce.productName()}</div>`;
+for (let i = 0; i < 5; i++) {
+  const name = faker.commerce.productName();
+  products += `<div>${name}</div>`;
 }
 
-document.querySelector("#app-products").innerHTML = products;
+document.querySelector("#dev-products").innerHTML = products;
